@@ -1,0 +1,13 @@
+version: '3'
+services:
+  selenium_chrome:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: browserbox:1.0
+    container_name: browser_sandbox
+    user: apps
+    ports:
+      - '5900:5900'
+    environment:
+      - VNC_SERVER_PASSWORD=password
