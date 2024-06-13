@@ -5,7 +5,7 @@ env:
   GITOPS_APP_FOLDER: lander
 jobs:
   Explore-GitHub-Actions:
-    name: ${{ env.GITOPS_APP_FOLDER  }} triggered this job		
+    name: ${{ github.workflow  }} triggered this job		
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
