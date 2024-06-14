@@ -17,3 +17,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: my-event
