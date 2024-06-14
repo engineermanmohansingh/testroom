@@ -1,4 +1,5 @@
 name: Repository Dispatch
+run-name: ${{ github.event.client_payload.workflow }} triggered this event 🚀
 on:
   repository_dispatch:
     types: [my-event]
