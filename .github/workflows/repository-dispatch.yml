@@ -4,6 +4,7 @@ on:
     types: [my-event]
 jobs:
   myEvent:
+    name : ${{ github.event.client_payload.workflow }}  triggered this job
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
