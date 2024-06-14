@@ -1,11 +1,11 @@
 name: Beta
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} is watching 👀
 on:
   watch:
     types: [started]
 jobs:
   Explore-GitHub-Actions:
-    name : ${{ github.workflow }} with secret triggered this job
+    name : ${{ github.workflow }} is doing something for the watcher ${{ github.actor }}
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
