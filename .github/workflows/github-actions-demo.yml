@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    name : ${{ github.workflow }} with secret ${{ secrets.GITHUB_TOKEN }} triggered this job
+    name : ${{ github.workflow }} with secret triggered this job
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -12,7 +12,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner with secret ${{ secrets.GITHUB_TOKEN }}."
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
