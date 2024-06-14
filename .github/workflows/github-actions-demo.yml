@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    name : ${{ github..workflow }} with secret ${{ secrets.GITHUB_TOKEN }} triggered this job
+    name : ${{ github.workflow }} with secret ${{ secrets.GITHUB_TOKEN }} triggered this job
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
