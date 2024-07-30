@@ -14,7 +14,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the $RUNNER_OS runner."
-      - run: echo "The job name is $JOB_NAME and build number is $GITHUB_RUN_NUMBER"
+      - run: echo "The job name is $GITHUB_JOB and build number is $GITHUB_RUN_NUMBER"
       - run: echo "🖥️ The workflow is now ready to test your code on the runner with secret ${{ secrets.GITHUB_TOKEN }}."
       - name: List files in the repository
         run: |
